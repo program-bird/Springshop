@@ -111,3 +111,5 @@ PageHelper.startPage(1, 10);</br>
 接收页面传递过来的参数page、rows。返回json格式的数据。</br>
 
 结果图：
+
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%874.png）
