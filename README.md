@@ -15,10 +15,10 @@ Shop-parent(父工程)
 >Shop-common(通用工程)
 
 Shop-manager(pom工程)聚合工程
->Shop-pojo(jar包)
->Shop-mapper(jar包)
->Shop-service(jar包)
->Shop-controller(war包)
+>Shop-pojo(jar包)<br/>
+>Shop-mapper(jar包)<br/>
+>Shop-service(jar包)<br/>
+>Shop-controller(war包)<br/>
 
 前台工程
 
@@ -38,7 +38,7 @@ Shop-manager(pom工程)聚合工程
 
 ##### 2.3.1 DAO层
 
-使用mybatis框架。创建SqlMapConfig.xml，创建一个applicationContext-dao.xml
+使用mybatis框架。创建SqlMapConfig.xml，创建一个applicationContext-dao.xml<br/>
 1、配置数据源
 2、需要让spring容器管理SqlsessionFactory，单例存在。
 3、把mapper的代理对象放到spring容器中。使用扫描包的方式加载mapper的代理对象。
