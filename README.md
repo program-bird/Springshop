@@ -17,9 +17,9 @@ Shop-parent
 >Shop-common
 
 Shop-manager(pom工程)聚合工程
->>Shop-pojo(jar包)
->>Shop-mapper(jar包)
->>Shop-service(jar包)
->>Shop-controller(war包)
+>Shop-pojo(jar包)
+>Shop-mapper(jar包)
+>Shop-service(jar包)
+>Shop-controller(war包)
 
 前台工程
