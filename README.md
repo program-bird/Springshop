@@ -87,7 +87,27 @@ Sql语句：SELECT * from tb_item LIMIT 0,30
 
 利用分页插件实现分页
 
-###### 3.2.3，1 分页插件实现原理
+###### 3.2.3.1 分页插件实现原理
 
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%873.png）
 
+###### 3.2.3.2 使用方法
 
+第一步：引入pageHelper的jar包。</br>
+第二步：需要在SqlMapConfig.xml中配置插件。</br>
+第三步：在查询的sql语句执行之前，添加一行代码：
+PageHelper.startPage(1, 10);</br>
+第一个参数是page，要显示第几页。</br>
+第二个参数是rows，没页显示的记录数。</br>
+第四步：取查询结果的总数量。</br>
+创建一个PageInfo类的对象，从对象中取分页信息。</br>
+
+##### 3.2.3 service 层
+
+接收分页参数，一个是page一个是rows。调用dao查询商品列表。并分页。返回商品列表。</br>
+
+##### 3.2.4 controller 层
+
+接收页面传递过来的参数page、rows。返回json格式的数据。</br>
+
+结果图：
