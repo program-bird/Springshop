@@ -89,7 +89,7 @@ Sql语句：SELECT * from tb_item LIMIT 0,30
 
 ###### 3.2.3.1 分页插件实现原理
 
-![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%873.png）
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%873.png)<br/>
 
 ###### 3.2.3.2 使用方法
 
@@ -112,4 +112,4 @@ PageHelper.startPage(1, 10);</br>
 
 结果图：
 
-![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%874.png）
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%874.png)<br/>
