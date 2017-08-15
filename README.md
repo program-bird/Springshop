@@ -9,12 +9,10 @@ ps：第一次写github，还在摸索之中，不足的地方请多多指正。
 
 ## 后台管理系统
 
-### 一 工程结构
+### 1 工程结构
 
-
-
-Shop-parent
->Shop-common
+Shop-parent(父工程)
+>Shop-common(通用工程)
 
 Shop-manager(pom工程)聚合工程
 >Shop-pojo(jar包)
@@ -23,3 +21,12 @@ Shop-manager(pom工程)聚合工程
 >Shop-controller(war包)
 
 前台工程
+
+
+### 2 准备工作
+
+#### 2.1 创建数据库
+使用mysql数据库
+
+
+### 3 商品列表的实现
