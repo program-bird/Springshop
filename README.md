@@ -27,6 +27,6 @@ Shop-manager(pom工程)聚合工程
 
 #### 2.1 创建数据库
 使用mysql数据库
-
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%871.jpg)
 
 ### 3 商品列表的实现
