@@ -15,9 +15,9 @@ ps：第一次写github，还在摸索之中，不足的地方请多多指正。
 
 Shop-parent
 >Shop-common
->Shop-manager(pom工程)聚合工程
+Shop-manager(pom工程)聚合工程
 >>Shop-pojo(jar包)
 >>Shop-mapper(jar包)
 >>Shop-service(jar包)
 >>Shop-controller(war包)
->前台工程
+前台工程
