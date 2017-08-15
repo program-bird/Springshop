@@ -26,11 +26,11 @@ Shop-manager(pom工程)聚合工程
 ### 2 准备工作
 
 #### 2.1 创建数据库
-使用mysql数据库
+使用mysql数据库<br/>
 
 商品表：
 
-![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%871.jpg)
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%871.jpg)<br/>
 
 #### 2.2 使用mybatis逆向工程
 
@@ -39,29 +39,29 @@ Shop-manager(pom工程)聚合工程
 ##### 2.3.1 DAO层
 
 使用mybatis框架。创建SqlMapConfig.xml，创建一个applicationContext-dao.xml<br/>
-1、配置数据源
-2、需要让spring容器管理SqlsessionFactory，单例存在。
-3、把mapper的代理对象放到spring容器中。使用扫描包的方式加载mapper的代理对象。
+1、配置数据源<br/>
+2、需要让spring容器管理SqlsessionFactory，单例存在。<br/>
+3、把mapper的代理对象放到spring容器中。使用扫描包的方式加载mapper的代理对象。<br/>
 
 ##### 2.3.2 Service层
 
-1、事务管理
-2、需要把service实现类对象放到spring容器中管理。
+1、事务管理<br/>
+2、需要把service实现类对象放到spring容器中管理。<br/>
 
 ##### 2.3.3 表现层
 
-1、配置注解驱动
-2、配置视图解析器
-3、需要扫描controller
+1、配置注解驱动<br/>
+2、配置视图解析器<br/>
+3、需要扫描controller<br/>
 
 ##### web.xml
 
-1、spring容器的配置
-2、Springmvc前端控制器的配置
-3、Post乱码过滤器
+1、spring容器的配置<br/>
+2、Springmvc前端控制器的配置<br/>
+3、Post乱码过滤器<br/>
 
 ### 3 商品列表的实现
 
 #### 3.1 打开后台管理工程的首页
 
-通过一个controller进行页面跳转展示首页，前端页面使用easyUI开发
+通过一个controller进行页面跳转展示首页，前端页面使用easyUI开发<br/>
