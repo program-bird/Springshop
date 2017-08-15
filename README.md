@@ -137,3 +137,7 @@ Text：节点名称<br/>
 State：如果不是叶子节点就是close，叶子节点就是open。Close的节点点击后会在此发送请求查询子项目。<br/>
 
 ![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%876.png)<br/>
+
+### 5 图片上传
+
+#### 5.1 图片服务器
