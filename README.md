@@ -73,3 +73,10 @@ Shop-manager(pom工程)聚合工程
 1、请求的url：/item/list
 
 ![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%872.png)<br/>
+
+2、请求的参数：http://localhost:8080/item/list?page=1&rows=30	分页信息。（需要看官方的手册）<br/>
+3、返回值。Json数据。数据格式：<br/>
+Easyui中datagrid控件要求的数据格式为：<br/>
+{total:”2”,rows:[{“id”:”1”,”name”,”张三”},{“id”:”2”,”name”,”李四”}]}<br/>
+
+##### 3.2.1 需求分析
