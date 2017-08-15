@@ -113,3 +113,27 @@ PageHelper.startPage(1, 10);</br>
 结果图：
 
 ![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%874.png)<br/>
+
+### 4 实现商品类目选择功能
+
+#### 4.1 需求
+
+在商品添加页面，点击“选择类目”显示商品类目列表：
+
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%875.png)<br/>
+
+#### 4.2 实现步骤
+
+1、按钮添加点击事件，弹出窗口，加载数据显示tree<br/>
+2、将选择类目的组件封装起来，通过TT.iniit()初始化，最终调用initItemCat()方法进行初始化<br/>
+3、创建数据库、以及tb _item_cat表，初始化数据<br/>
+4、编写Controller、Service、Mapper<br/>
+
+#### 4.3 EasyUI tree数据结构
+
+数据结构中必须包含：<br/>
+Id：节点id<br/>
+Text：节点名称<br/>
+State：如果不是叶子节点就是close，叶子节点就是open。Close的节点点击后会在此发送请求查询子项目。<br/>
+
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%876.png)<br/>
