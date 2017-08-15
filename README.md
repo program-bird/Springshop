@@ -79,4 +79,15 @@ Shop-manager(pom工程)聚合工程
 Easyui中datagrid控件要求的数据格式为：<br/>
 {total:”2”,rows:[{“id”:”1”,”name”,”张三”},{“id”:”2”,”name”,”李四”}]}<br/>
 
-##### 3.2.1 需求分析
+##### 3.2.2 dao层
+
+Sql语句：SELECT * from tb_item LIMIT 0,30
+
+##### 3.2.3 分页插件PageHelper
+
+利用分页插件实现分页
+
+###### 3.2.3，1 分页插件实现原理
+
+
+
