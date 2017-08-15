@@ -54,7 +54,7 @@ Shop-manager(pom工程)聚合工程
 2、配置视图解析器<br/>
 3、需要扫描controller<br/>
 
-##### web.xml
+##### 2.3.4 web.xml
 
 1、spring容器的配置<br/>
 2、Springmvc前端控制器的配置<br/>
