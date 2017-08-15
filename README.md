@@ -71,3 +71,5 @@ Shop-manager(pom工程)聚合工程
 ##### 3.2.1 需求分析
 
 1、请求的url：/item/list
+
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%872.jpg)<br/>
