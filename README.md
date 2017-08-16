@@ -22,6 +22,9 @@ Shop-manager(pom工程)聚合工程
 
 前台工程
 
+### 1.1 功能概述
+
+查询商品功能，新增商品功能（包括新增商品类目，添加商品图片，添加商品概述），添加商品规格参数
 
 ### 2 准备工作
 
@@ -141,3 +144,19 @@ State：如果不是叶子节点就是close，叶子节点就是open。Close的�
 ### 5 图片上传
 
 #### 5.1 图片服务器
+
+搭建分布式图片服务器。使用nginx作为静态资源服务器（本项目此处利用虚拟机模拟图片服务器）
+在虚拟机上安装nginx并进行配置
+
+##### 5.1.1 Nginx配置
+
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%877.png)<br/>
+
+需要把nginx的根目录指向ftp上传文件的目录。
+
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%878.png)<br/>
+
+#### 5.2 图片上传实现
+
+Common.js
+1、绑定事件
