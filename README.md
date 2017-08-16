@@ -188,3 +188,51 @@ uploadFile<br/>
 返回值：返回json数据，应该返回一个pojo，PictureResult对象。<br/>
 
 ### 6 富文本编辑器
+
+#### 6.1 kindeditor的使用过程：
+
+1、导入js：<br/>
+
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%8714.png)<br/>
+
+2、定义多行文本（不可见、给定name）<br/>
+
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%8715.png)<br/>
+
+3、调用TT.createEditor
+
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%8716.png)<br/>
+
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%8717.png)<br/>
+
+4、效果
+
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%8718.png)<br/>
+
+#### 6.1 取文本编辑器中的内容
+
+将编辑器的内容设置到原来的textarea控件里。<br/>
+
+### 7 新增商品实现
+
+#### 7.1 提交请求的数据格式
+
+$("#itemAddForm").serialize()将表单序列号为key-value形式的字符串以post 的形式将表单的内容提交。<br/>
+
+请求的url： /item/save。<br/>
+
+返回的结果：。<br/>
+淘淘自定义返回结果：。<br/>
+1、状态码。<br/>
+2、响应的消息。<br/>
+3、响应的数据。<br/>
+
+#### 7.2 service的实现
+
+功能分析：接收controller传递过来的对象一个是item一个是itemDesc对象。需要生成商品的id。把不为空的字段都补全。分别向两个表中插入数据。<br/>
+参数：TbItem，TbItemDesc<br/>
+
+#### 7.3 controller的实现
+
+功能分析：接收页面传递过来的数据包括商品和商品描述。<br/>
+参数：TbItem、TbItemDesc。<br/>
