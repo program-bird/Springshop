@@ -299,6 +299,6 @@ $("#itemAddForm").serialize()将表单序列号为key-value形式的字符串以
                 "v": "是 "<br/>
             }<br/>
 
-        ]<br/>
+        }<br/>
 }<br/>
 ]<br/>
