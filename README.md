@@ -158,5 +158,33 @@ State：如果不是叶子节点就是close，叶子节点就是open。Close的�
 
 #### 5.2 图片上传实现
 
+##### 5.2.1需求分析
+
 Common.js
-1、绑定事件
+1、绑定事件<br/>
+
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%8711.png)<br/>
+
+2、初始化参数<br/>
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%8713.png)<br/>
+
+3、上传图片的url：<br/>
+/pic/upload<br/>
+4、上图片参数名称：<br/>
+uploadFile<br/>
+5、返回结果数据类型json<br/>
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%8712.png)<br/>
+
+##### 5.2.2 service实现
+
+功能：接收controller层传递过来的图片对象，把图片上传到ftp服务器。给图片生成一个新的名字。<br/>
+参数：MultiPartFile uploadFile<br/>
+返回值：返回一个pojo，应该是PictureResult。<br/>
+
+##### 5.2.4 Controller实现
+
+功能：接收页面传递过来的图片。调用service上传到图片服务器。返回结果。<br/>
+参数：MultiPartFile uploadFile<br/>
+返回值：返回json数据，应该返回一个pojo，PictureResult对象。<br/>
+
+### 6 富文本编辑器
