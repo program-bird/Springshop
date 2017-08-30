@@ -105,7 +105,7 @@ Controller层</br>
 ### 3.5 大广告位展示实现
 
 Service层</br>
-根据内容分类id查询分类的内容列表，需要使用httpclient调用taotao-rest的服务。得到一个json字符串。需要把字符串转换成java对象taotaoResult对象。从taotaoResult对象中取data属性，得到内容列表。把内容列表转换成jsp页面要求的json格式。返回一个json字符串。</br>
+根据内容分类id查询分类的内容列表，需要使用httpclient调用rest的服务。得到服务发布的java对象。从java对象中取出内容列表。把内容列表转换成jsp页面要求的json格式。返回一个json字符串。</br>
 参数：没有参数</br>
 返回值：json字符串。</br>
 
