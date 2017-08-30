@@ -111,3 +111,20 @@ Service层</br>
 
 Controller</br>
 展示首页返回一个逻辑视图，需要把首页大广告位的json数据传递给jsp。
+
+## 4.商品搜索的实现
+
+![image](https://github.com/program-bird/Springshop/blob/master/Image/图片33.png)<br/>
+
+### 4.1 需求分析
+
+![image](https://github.com/program-bird/Springshop/blob/master/Image/图片34.png)<br/>
+
+用户在首页中输入查询条件，点击查询向taotao-portal发送请求，参数就是查询的条件，页码。Taoto-portal调用taotao-search发布的服务进行搜索，参数应该是查询条件和页码及每页显示的记录数（参数可选）。Taotao-search返回一个json格式的数据（TaotaoResult包装一个SearchResult对象）。Taotao-portal接收json数据需要把json数据转换成java对象。把java对象传递给jsp页面，jsp渲染java对象得到商品查询结果页面。<br/>
+
+## 5.商品详情页面展示
+
+需要在portal中调用rest发布的服务，查询商品详情。<br/>
+1、商品的基本信息<br/>
+2、商品的描述<br/>
+3、商品的规格<br/>
