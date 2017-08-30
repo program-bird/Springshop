@@ -45,3 +45,69 @@ controller中@ResponseBody注解下直接返回字符串会产生中文乱码，
 门户系统直接调用rest服务接口，展示结果如下</br>
 
 ![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%8724.png)</br>
+
+
+## 3.商城首页大广告位的展示
+
+### 3.1 方案分析
+
+方案一：</br>
+
+jsonp跨域请求</br>
+
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%8728.png)</br>
+
+需要当首页加载完毕后，大广告位就应该显示。没有触发事件。不是太合适。</br>
+优点：不需要二次请求，页面直接加载内容数据。减少门户系统的压力。</br>
+缺点：需要延迟加载。不利于seo优化。</br>
+
+方案二：</br>
+
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%8729.png)</br>
+
+优点：有利于seo优化。可以在taotao-portal中对数据进行加工。</br>
+缺点：系统直接需要调用服务查询内容信息。多了一次http请求。</br>
+
+系统直接服务的调用，需要使用httpclient来实现。portal和rest是在同一个局域网内部。速度非常快，调用时间可以忽略不计。</br>
+
+展示首页内容功能，使用方案二实现。</br>
+
+### 3.2 流程展示
+
+![image](https://github.com/program-bird/Springshop/blob/master/Image/%E5%9B%BE%E7%89%8730.png)</br>
+
+### 3.3 内容服务发布
+
+根据内容的分类id查询内容列表，从tb_content表中查询。服务是一个restFul形式的服务。使用http协议传递json格式的数据。</br>
+
+4.3.3Service层
+接收内容分类id，根据分类id查询分类列表。返回一个内容pojo列表。
+参数：分类id
+返回值：pojo列表
+
+Dao层：</br>
+从tb_content表中查询，根据内容分类id查询。是单表查询。可以使用逆向工程生成的代码。</br>
+
+Service层</br></br>
+接收内容分类id，根据分类id查询分类列表。返回一个内容pojo列表。</br>
+参数：分类id</br>
+返回值：pojo列表</br>
+
+Controller层</br>
+发布服务。接收查询参数。Restful风格内容分类id应该从url中取。</br>
+/rest/content/list/{contentCategoryId}</br>
+从url中取内容分类id，调用Service查询内容列表。返回内容列表。返回一个json格式的数据。可以使用TaotaoResult包装此列表。</br>
+
+### 3.4 Httpclient的使用
+
+对Httpclient get和post方法进行封装，以供使用。</br>
+
+### 3.5 大广告位展示实现
+
+Service层</br>
+根据内容分类id查询分类的内容列表，需要使用httpclient调用taotao-rest的服务。得到一个json字符串。需要把字符串转换成java对象taotaoResult对象。从taotaoResult对象中取data属性，得到内容列表。把内容列表转换成jsp页面要求的json格式。返回一个json字符串。</br>
+参数：没有参数</br>
+返回值：json字符串。</br>
+
+Controller</br>
+展示首页返回一个逻辑视图，需要把首页大广告位的json数据传递给jsp。
