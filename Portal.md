@@ -93,7 +93,13 @@ Service层</br></br>
 参数：分类id</br>
 返回值：pojo列表</br>
 
-Controller层</br>
+商品key的定义：
+基本信息：
+REDIS_ITEM_KEY:商品id:base=json
+描述：
+REDIS_ITEM_KEY:商品id:desc=json
+规格参数：
+REDIS_ITEM_KEY:商品id:param=jsonController层</br>
 发布服务。接收查询参数。Restful风格内容分类id应该从url中取。</br>
 /rest/content/list/{contentCategoryId}</br>
 从url中取内容分类id，调用Service查询内容列表。返回内容列表。返回一个json格式的数据。可以使用TaotaoResult包装此列表。</br>
@@ -128,3 +134,47 @@ Controller</br>
 1、商品的基本信息<br/>
 2、商品的描述<br/>
 3、商品的规格<br/>
+
+### 5.1 服务发布
+
+需要在taotao-rest工程中发布服务<br/>
+1、取商品基本信息的服务<br/>
+2、取商品描述的服务<br/>
+3、取商品规格的服务<br/>
+需要把商品信息添加到缓存中。设置商品的过期时间，过期时间为一天。需要缓存同步。<br/>
+
+#### 5.1.1 取商品基本信息
+
+dao层：<br/>
+查询的表tb_item：<br/>
+
+接收商品id，根据商品id查询商品基本信息。返回一个商品的pojo，使用taotaoResult包装返回。<br/>
+
+Controller层：<br/>
+
+接收商品id调用Service查询商品信息，返回商品对象，使用TaotaoResult包装。<br/>
+Url：/rest/item/info/{itemId}<br/>
+
+#### 5.1.2 添加缓存逻辑
+
+Redis的hash类型中的key是不能设置过期时间。如果还需要对key进行分类可以使用折中的方案。<br/>
+
+商品key的定义：<br/>
+基本信息：<br/>
+REDIS_ITEM_KEY:商品id:base=json<br/>
+描述：<br/>
+REDIS_ITEM_KEY:商品id:desc=json<br/>
+规格参数：<br/>
+REDIS_ITEM_KEY:商品id:param=json<br/>
+
+#### 5.1.2 取商品基本信息
+同上<br/>
+
+#### 5.1.2 取商品基本信息
+同上<br/>
+
+### 5.2 portal 调用服务
+
+商品基本信息<br/>
+商品描述信息<br/>
+商品规格参数<br/>
