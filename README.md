@@ -302,6 +302,69 @@ $("#itemAddForm").serialize()将表单序列号为key-value形式的字符串以
 }<br/>
 ]<br/>
 
+### 8.1.2 创建规格参数模板
+
+请求的url：<br/>
+/item/param/query/itemcatid/{itemCatId}<br/>
+参数：itemCatId，从url中获得<br/>
+返回值：TaotaoResult<br/>
+
+dao层：<br/>
+从tb_item_param表中根据商品分类id查询内容。<br/>
+单表操作。可以实现逆向工程的代码。<br/>
+
+3Service层：<br/>
+功能：接收商品分类id。调用mapper查询tb_item_param表，返回结果TaotaoResult。<br/>
+
+Controller层：<br/>
+接收cid参数。调用Service查询规格参数模板。返回TaotaoResult。返回json数据。<br/>
+
+### 8.1.3 提交规格参数模板
+
+请求的url：<br/>
+/item/param/save/{cid}<br/>
+参数：<br/>
+String paramData<br/>
+返回值：<br/>
+TaotaoResult<br/>
+
+Dao层<br/>
+保存规格参数模板，向tb_item_param表添加一条记录。可以使用逆向工程生成的代码。<br/>
+
+Service层<br/>
+功能：接收TbItemParam对象。 把对象调用mapper插入到tb_item_param表中。返回TaotaoResult。<br/>
+
+Controller层<br/>
+功能：接收cid、规格参数模板。创建一TbItemParam对象。调用Service返回TaotaoResult。返回json数据。<br/>
+
+### 8.1.4 根据规格参数模板生成表单
+
+在商品添加功能中，读取此商品对应的规格模板，生成表单。供使用者添加规格参数。<br/>
+
+### 8.1.5 保存商品的规格参数
+
+Dao层<br/>
+需要向tb_item_param_item表中添加数据。<br/>
+
+Service层<br/>
+接收规格参数的内容，和商品id。拼装成pojo调用mapper 的方法tb_item_param_item表中添加数据返回TaotaoResult。<br/>
+
+cotroller层：<br/>
+接收规格参数信息，调用Service层保存商品信息及商品描述及商品规格参数。返回taotaoResult.<br/>
+
+### 8.1.6 展示规格参数
+
+当现实商品详情页面时，需要把商品的规格参数根据商品id取出来，生成html展示到页面。<br/>
+
+Dao层<br/>
+根据商品id查询规格参数，单表查询。<br/>
+
+Service<br/>
+接收商品id查询规格参数表。根据返回的规格参数生成html返回html。<br/>
+
+Controller<br/>
+接收商品id调用Service查询规格参数信息，得到规格参数的html。返回一个逻辑视图。把html展示到页面。<br/>
+
 ## 9 网站内容管理
 
 内容管理完成对首页的动态管理，本项目中主要实现的是对首页广告位的分类以及内容的管理<br/>
