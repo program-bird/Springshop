@@ -66,7 +66,3 @@ controller层<br/>
 接收token调用Service返回用户信息，使用TaotaoResult包装。<br/>
 请求的url：<br/>
 http://sso.taotao.com/user/token/{token}<br/>
-
-### 2.5 配置拦截器实现用户登录
-
-在门户系统点击登录连接跳转到登录页面。登录成功后，跳转到门户系统的首页，在门户系统中需要从cookie中 把token取出来。所以必须在登录成功后把token写入cookie。并且cookie的值必须在系统之间能共享。<br/>
