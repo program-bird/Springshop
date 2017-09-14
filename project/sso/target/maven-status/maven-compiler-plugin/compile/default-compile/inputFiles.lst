@@ -1,0 +1,7 @@
+/home/liuch/myworkspace/taotao-sso/src/main/java/com/taotao/sso/service/UserService.java
+/home/liuch/myworkspace/taotao-sso/src/main/java/com/taotao/sso/dao/JedisClient.java
+/home/liuch/myworkspace/taotao-sso/src/main/java/com/taotao/sso/dao/impl/JedisClientCluster.java
+/home/liuch/myworkspace/taotao-sso/src/main/java/com/taotao/sso/controller/PageController.java
+/home/liuch/myworkspace/taotao-sso/src/main/java/com/taotao/sso/controller/UserController.java
+/home/liuch/myworkspace/taotao-sso/src/main/java/com/taotao/sso/service/impl/UserServiceImpl.java
+/home/liuch/myworkspace/taotao-sso/src/main/java/com/taotao/sso/dao/impl/JedisClientSingle.java

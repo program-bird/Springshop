@@ -1,0 +1,11 @@
+/home/liuch/myworkspace/taotao-search/src/main/java/com/taotao/search/dao/SearchDao.java
+/home/liuch/myworkspace/taotao-search/src/main/java/com/taotao/search/mapper/ItemMapper.java
+/home/liuch/myworkspace/taotao-search/src/main/java/com/taotao/search/pojo/SearchResult.java
+/home/liuch/myworkspace/taotao-search/src/main/java/com/taotao/search/service/SearchService.java
+/home/liuch/myworkspace/taotao-search/src/main/java/com/taotao/search/service/ItemService.java
+/home/liuch/myworkspace/taotao-search/src/main/java/com/taotao/search/dao/impl/SearchDaoImpl.java
+/home/liuch/myworkspace/taotao-search/src/main/java/com/taotao/search/service/impl/SearchServiceImpl.java
+/home/liuch/myworkspace/taotao-search/src/main/java/com/taotao/search/controller/SearchController.java
+/home/liuch/myworkspace/taotao-search/src/main/java/com/taotao/search/pojo/Item.java
+/home/liuch/myworkspace/taotao-search/src/main/java/com/taotao/search/service/impl/ItemServiceImpl.java
+/home/liuch/myworkspace/taotao-search/src/main/java/com/taotao/search/controller/ItemController.java

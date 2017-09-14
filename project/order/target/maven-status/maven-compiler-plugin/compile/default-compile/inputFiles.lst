@@ -1,0 +1,7 @@
+/home/liuch/myworkspace/taotao-order/src/main/java/com/taotao/order/dao/impl/JedisClientCluster.java
+/home/liuch/myworkspace/taotao-order/src/main/java/com/taotao/order/controller/OrderController.java
+/home/liuch/myworkspace/taotao-order/src/main/java/com/taotao/order/pojo/Order.java
+/home/liuch/myworkspace/taotao-order/src/main/java/com/taotao/order/service/OrderService.java
+/home/liuch/myworkspace/taotao-order/src/main/java/com/taotao/order/dao/impl/JedisClientSingle.java
+/home/liuch/myworkspace/taotao-order/src/main/java/com/taotao/order/service/impl/OrderServiceImpl.java
+/home/liuch/myworkspace/taotao-order/src/main/java/com/taotao/order/dao/JedisClient.java
